@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
+import { ShellComponent } from './layout/shell/shell.component';
 
+/**
+ * Root application component. Hosts the application shell.
+ */
 @Component({
   selector: 'app-root',
-  imports: [],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  standalone: true,
+  imports: [ShellComponent],
+  template: `<app-shell></app-shell>`,
 })
-export class AppComponent {
-  title = 'frontend_ui is being generated';
-}
+export class AppComponent {}

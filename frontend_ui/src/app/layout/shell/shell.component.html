@@ -1,0 +1,8 @@
+<app-top-nav (sidebarToggle)="toggleSidebar()"></app-top-nav>
+
+<div class="layout" id="layout" [class.collapsed]="collapsed">
+  <app-sidebar></app-sidebar>
+  <main class="content">
+    <router-outlet></router-outlet>
+  </main>
+</div>

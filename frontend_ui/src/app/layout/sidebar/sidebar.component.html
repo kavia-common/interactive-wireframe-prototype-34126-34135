@@ -1,0 +1,10 @@
+<aside class="sidebar" id="sidebar">
+  <div class="section-title">Navigation</div>
+  <ul class="nav-list">
+    <li class="nav-item" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="onNavigate()">Dashboard</li>
+    <li class="nav-item" routerLink="/devices" routerLinkActive="active" (click)="onNavigate()">Devices</li>
+    <li class="nav-item" routerLink="/analytics" routerLinkActive="active" (click)="onNavigate()">Analytics</li>
+    <li class="nav-item" routerLink="/users" routerLinkActive="active" (click)="onNavigate()">Users</li>
+    <li class="nav-item" routerLink="/settings" routerLinkActive="active" (click)="onNavigate()">Settings</li>
+  </ul>
+</aside>

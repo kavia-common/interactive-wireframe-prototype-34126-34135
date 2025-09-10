@@ -1,0 +1,21 @@
+<header class="top-nav" (click)="closeDropdown()">
+  <div class="brand">
+    <button class="btn btn-tertiary" aria-label="Toggle menu" (click)="toggleSidebar(); $event.stopPropagation()">☰</button>
+    <span>Acme Console</span>
+  </div>
+  <div class="searchbar">
+    <input class="input" type="search" placeholder="Search..." />
+  </div>
+  <div class="top-actions">
+    <button class="btn btn-outline">New</button>
+    <div class="dropdown" (click)="$event.stopPropagation()">
+      <button class="btn btn-tertiary" aria-haspopup="true" [attr.aria-expanded]="dropdownOpen" (click)="toggleDropdown($event)">
+        Account ▾
+      </button>
+      <div class="dropdown-menu" [class.open]="dropdownOpen" role="menu">
+        <div class="dropdown-item" (click)="onDropdownAction('settings')">Settings</div>
+        <div class="dropdown-item" (click)="onDropdownAction('logout')">Logout</div>
+      </div>
+    </div>
+  </div>
+</header>
